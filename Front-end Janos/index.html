@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janos SofSys</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="index_script.js"></script>
+    <link rel="stylesheet" href="index_style.css?v=1.2">
+</head>
+
+<body class="font-sans bg-gray-100 flex flex-col min-h-screen">
+
+    <!-- Header Section -->
+    <header class="fixed top-0 w-full bg-white shadow-md z-10">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <img src="./janos.png" alt="Logo" class="h-8 sm:h-12"> <!-- Smaller height on mobile -->
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="./index.html" class="text-black hover:text-gray-600">Home</a>
+                <a href="./aboutUs.html" class="text-black hover:text-gray-600">About Us</a>
+                <a href="./easyAM.html" class="text-black hover:text-gray-600">EasyAM</a>
+                <a href="#" class="text-black hover:text-gray-600">Gallery</a>
+                <a href="./career.html" class="text-black hover:text-gray-600">Career</a>
+                <a href="#" class="text-black hover:text-gray-600">Contact</a>
+            </nav>
+
+            <!-- Hamburger Icon -->
+            <div class="flex md:hidden">
+                <button id="menu-toggle" class="text-2xl text-red-700">☰</button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-white shadow-lg hidden">
+            <ul class="space-y-2 p-4">
+                <li><a href="./index.html" class="text-black hover:text-gray-600">Home</a></li>
+                <li><a href="./aboutUs.html" class="text-black hover:text-gray-600">About Us</a></li>
+                <li><a href="./easyAM.html" class="text-black hover:text-gray-600">EasyAM</a></li>
+                <li><a href="#" class="text-black hover:text-gray-600">Gallery</a></li>
+                <li><a href="./career.html" class="text-black hover:text-gray-600">Career</a></li>
+                <li><a href="#" class="text-black hover:text-gray-600">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="pt-24 pb-24 flex-grow">
+        <div class="container mx-auto px-4 sm:px-6">
+            <!-- Text and Image Section -->
+            <div class="flex flex-col md:flex-row items-center pt-12 gap-6">
+                <!-- Left Side Text Box -->
+                <div class="md:w-1/2 text-left">
+                    <h1 class="text-3xl sm:text-4xl font-bold text-gray-700 mb-2 sm:mb-4">
+                        <span class="opacity-0 animate-fly-in">Janos</span>
+                        <span class="opacity-0 animate-fly-in">-</span>
+                        <span class="opacity-0 animate-fly-in">Your</span>
+                        <span class="opacity-0 animate-fly-in">Trusted</span>
+                        <span class="opacity-0 animate-fly-in">Software</span>
+                        <span class="opacity-0 animate-fly-in">Development</span>
+                        <span class="opacity-0 animate-fly-in">Partner</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-gray-600 opacity-0 animate-fly-in leading-relaxed">
+                        A top-tier software development team assisting owners and decision-makers
+                        to implement digital initiatives to achieve lasting financial success.
+                    </p>
+                </div>
+
+                <!-- Right Side Image Box -->
+                <div class="md:w-1/2 mt-6 md:mt-0 flex justify-center">
+                    <img src="./intro_pic.png"
+                        alt="Placeholder Image"
+                        class="rounded-lg shadow-lg w-4/5 sm:w-3/4 md:w-3/4 opacity-0 animate-slide-up">
+                </div>
+            </div>
+
+
+            <!-- New Section: "OUR SERVICES" -->
+            <div class="mt-16 py-12 text-center">
+                <h1 id="services-header-1" class="text-4xl font-bold text-gray-700 mb-4 relative inline-block">
+                    OUR SERVICES
+                    <!-- Animated underline -->
+                    <div class="pt-3">
+                        <div id="underline-1" class="absolute left-0 right-0 bottom-[-12px] h-[6px]">
+                            <div id="line-left-1" class="absolute bg-purple-600 h-full w-0 left-0"></div>
+                            <div id="line-right-1" class="absolute bg-purple-600 h-full w-0 right-0"></div>
+                        </div>
+                    </div>
+                </h1>
+                <p class="text-xl text-gray-600 text-justify max-w-3xl pt-4 mx-auto">
+                    We build software development teams that grow with our clients, from the early stages to whatever
+                    they aspire to be.
+                    Our expertise includes front-end, backend, database, and server solutions for mobile, web, and
+                    desktop applications.
+                    Our purpose is to provide our clients with expert guidance and to build software vital to their
+                    organizations.
+                </p>
+            </div>
+
+            <div class="mt-10">
+                <div class="container-animate">
+                    <div class="image-box" id="imageBox1">
+                        <img src="./EasyAM_SMS.png"
+                            alt="Placeholder Image">
+                    </div>
+                    <div class="line-bar" id="lineBar1"></div>
+                    <div class="text-box" id="textBox1">
+                        <h1 class="text-3xl font-bold text-black mb-2">EasyAM-SMS Share Management Systems</h1>
+                        <p class="text-justify">Treading on Agile development methodologies and Rational Unified Process
+                            practices in
+                            testing, Enosis ensures highest quality of software solutions to you. Our software testing
+                            strategy ensures every component of your software are free of bugs and issues . . .
+                        </p>
+                        <div class="pt-3">
+                            <button class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-1 px-3 rounded">
+                                <a href="./easyAM_sms.html">Read More</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-animate">
+                    <div class="text-box" id="textBox2">
+                        <h1 class="text-3xl font-bold text-black mb-2">EasyAM-AGM Annual General Meeting</h1>
+                        <p class="text-justify">Treading on Agile development methodologies and Rational Unified Process
+                            practices in
+                            testing, Enosis ensures highest quality of software solutions to you. Our software testing
+                            strategy ensures every component of your software are free of bugs and issues . . .</p>
+                        <div class="pt-3">
+                            <button class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-1 px-3 rounded">
+                                <a href="./easyAM_sms.html">Read More</a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="line-bar" id="lineBar2"></div>
+                    <div class="image-box" id="imageBox2">
+                        <img src="./AGM_image.png"
+                            alt="Placeholder Image">
+                    </div>
+                </div>
+                <div class="container-animate">
+                    <div class="image-box" id="imageBox1">
+                        <img src="./DPS_image.png"
+                            alt="Placeholder Image">
+                    </div>
+                    <div class="line-bar" id="lineBar1"></div>
+                    <div class="text-box" id="textBox1">
+                        <h1 class="text-3xl font-bold text-black mb-2">EasyAM-DPS Dividend Processing Services</h1>
+                        <p class="text-justify">Treading on Agile development methodologies and Rational Unified Process
+                            practices in
+                            testing, Enosis ensures highest quality of software solutions to you. Our software testing
+                            strategy ensures every component of your software are free of bugs and issues . . .</p>
+                        <div class="pt-3">
+                            <button class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-1 px-3 rounded">
+                                <a href="./easyAM_sms.html">Read More</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-animate">
+                    <div class="text-box" id="textBox2">
+                        <h1 class="text-3xl font-bold text-black mb-2">EasyAM-RIP Right Issue Processing</h1>
+                        <p class="text-justify">Treading on Agile development methodologies and Rational Unified Process
+                            practices in
+                            testing, Enosis ensures highest quality of software solutions to you. Our software testing
+                            strategy ensures every component of your software are free of bugs and issues . . .</p>
+                        <div class="pt-3">
+                            <button class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-1 px-3 rounded">
+                                <a href="./easyAM_sms.html">Read More</a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="line-bar" id="lineBar2"></div>
+                    <div class="image-box" id="imageBox2">
+                        <img src="./RIP_image.png"
+                            alt="Placeholder Image">
+                    </div>
+                </div>
+                <div class="container-animate">
+                    <div class="image-box" id="imageBox1">
+                        <img src="./HCM_image.png"
+                            alt="Placeholder Image">
+                    </div>
+                    <div class="line-bar" id="lineBar1"></div>
+                    <div class="text-box" id="textBox1">
+                        <h1 class="text-3xl font-bold text-black mb-2">EasyAM-HCM Human Capital Management</h1>
+                        <p class="text-justify">Treading on Agile development methodologies and Rational Unified Process
+                            practices in
+                            testing, Enosis ensures highest quality of software solutions to you. Our software testing
+                            strategy ensures every component of your software are free of bugs and issues . . .</p>
+                        <div class="pt-3">
+                            <button class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-1 px-3 rounded">
+                                <a href="./easyAM_sms.html">Read More</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-animate">
+                    <div class="text-box" id="textBox2">
+                        <h1 class="text-3xl font-bold text-black mb-2">EasyAM-CS Cyber Security</h1>
+                        <p class="text-justify">Treading on Agile development methodologies and Rational Unified Process
+                            practices in
+                            testing, Enosis ensures highest quality of software solutions to you. Our software testing
+                            strategy ensures every component of your software are free of bugs and issues . . .</p>
+                        <div class="pt-3">
+                            <button class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-1 px-3 rounded">
+                                <a href="./easyAM_sms.html">Read More</a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="line-bar" id="lineBar2"></div>
+                    <div class="image-box" id="imageBox2">
+                        <img src="./CS_image.png"
+                            alt="Placeholder Image">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-10 pt-12 text-center w-11/12 max-w-6xl mx-auto">
+                <h1 id="services-header-2" class="text-4xl font-bold text-gray-700 mb-8 relative inline-block">
+                    Why Choose Us !!
+                    <!-- Animated underline -->
+                    <div class="pt-3">
+                        <div id="underline-2" class="absolute left-0 right-0 bottom-[-12px] h-[6px]">
+                            <div id="line-left-2" class="absolute bg-purple-600 h-full w-0 left-0"></div>
+                            <div id="line-right-2" class="absolute bg-purple-600 h-full w-0 right-0"></div>
+                        </div>
+                    </div>
+                </h1>
+            </div>
+
+            <section
+                class="container flex flex-col sm:flex-row sm:justify-between w-11/12 md:w-full max-w-6xl mx-auto gap-6 p-4 md:p-6">
+                <!-- CEO Section -->
+                <div
+                    class="ceo-section w-full sm:w-1/3 bg-black text-white text-center p-3 md:p-4 rounded-lg order-1 sm:order-2">
+                    <img src="http://janos.com.bd/img/feature.jpg" alt="CEO" class="ceo-image w-full h-auto rounded-lg">
+                    <p class="ceo-bio mt-3 text-justify text-sm md:text-xm">
+                        Highly skilled professionals who possess expertise in diverse Business and Technology areas make
+                        up our
+                        team. To provide world class service we employ the best technicians, adhere to proven
+                        methodology,
+                        provide superior client service and become a true business partner in every project.
+                    </p>
+                    <p class="mt-3 font-bold text-justify text-sm md:text-xm">Our Roadmap to development is a collection
+                        of eight steps:</p>
+                    <p class="mt-2 text-sm text-justify md:text-xm">
+                        • Data Mining<br> • Forming a sketch<br> • Making a blueprint<br> • Designing<br> •
+                        Constructing<br> • Testing<br> • Deployment<br> • Maintenance & Upgradation<br> • Rapid
+                        implementation.
+                    </p>
+                </div>
+
+                <!-- Left Content -->
+                <div class="content-left w-full  sm:w-1/3 space-y-6 md:space-y-8 order-2 sm:order-1 sm:pt-20">
+                    <div class="text-block left flex items-start gap-3 md:gap-4">
+                        <img src="./house (1).png" alt="" class="w-10 h-10 md:w-8 md:h-8">
+                        <div>
+                            <h3 class="text-lg font-semibold md:text-xm text-gray-800">Best in Industry</h3>
+                            <p class="text-sm md:text-xm text-gray-600 text-justify">
+                                We strive for development from every ascribed level of technologies to enhance users
+                                performing
+                                environment fastening interfaces to be best in Industry level.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text-block left flex items-start gap-3 md:gap-4">
+                        <img src="./smile-face.png" alt="" class="w-10 h-10 md:w-8 md:h-8">
+                        <div>
+                            <h3 class="text-lg font-semibold md:text-xm text-gray-800">100% Happy Clients</h3>
+                            <p class="text-sm md:text-xm text-gray-600 text-justify">
+                                We make customers 100% happy remained connected listening all to provide required
+                                supports to
+                                happen create new development.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text-block left flex items-start gap-3 md:gap-4">
+                        <img src="./bar-chart.png" alt="" class="w-10 h-10 md:w-8 md:h-8">
+                        <div>
+                            <h3 class="text-lg font-semibold md:text-xm text-gray-800">Agile</h3>
+                            <p class="text-sm md:text-xm text-gray-600 text-justify">
+                                An agile-based software development approach offers many advantages of an iterative and
+                                fast-paced
+                                process. However, customers often find themselves at crossroads when it comes to
+                                choosing a specific
+                                adoption path.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content -->
+                <div class="content-right w-full sm:w-1/3 space-y-6 md:space-y-8 order-3 sm:order-3 sm:pt-20">
+                    <div class="text-block right flex items-start gap-3 md:gap-4">
+                        <img src="./man-walking.png" alt="" class="w-10 h-10 md:w-8 md:h-8">
+                        <div>
+                            <h3 class="text-lg font-semibold md:text-xm text-gray-800">Complexity Works</h3>
+                            <p class="text-sm md:text-xm text-gray-600 text-justify">
+                                Expected solutions never come from simple things. So behind the simple interfaces, we
+                                bind mammoth
+                                structures as you desire resembling complexity works for you.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text-block right flex items-start gap-3 md:gap-4">
+                        <img src="./cube.png" alt="" class="w-10 h-10 md:w-8 md:h-8">
+                        <div>
+                            <h3 class="text-lg font-semibold md:text-xm text-gray-800">Made Simple</h3>
+                            <p class="text-sm md:text-xm text-gray-600 text-justify">
+                                We provide all possible solutions at your required end from massive processing of giant
+                                IT
+                                infrastructures from our end to make your problems very simple.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text-block right flex items-start gap-3 md:gap-4">
+                        <img src="./server.png" alt="" class="w-10 h-10 md:w-8 md:h-8">
+                        <div>
+                            <h3 class="text-lg font-semibold md:text-xm text-gray-800">24/7 Customer Support</h3>
+                            <p class="text-sm md:text-xm text-gray-600 text-justify">
+                                We provide support around the clock to solve problems through planning, installation,
+                                training,
+                                troubleshooting, maintenance, upgrading, and disposal of products.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+            <!-- hidden Section -->
+
+
+            <div class="mt-16 py-12 text-center">
+                <h1 id="services-header-3" class="text-4xl font-bold text-gray-700 mb-4 relative inline-block">
+                    Our Valuable Clents
+                    <!-- Animated underline -->
+                    <div class="pt-3">
+                        <div id="underline-3" class="absolute left-0 right-0 bottom-[-12px] h-[6px]">
+                            <div id="line-left-3" class="absolute bg-purple-600 h-full w-0 left-0"></div>
+                            <div id="line-right-3" class="absolute bg-purple-600 h-full w-0 right-0"></div>
+                        </div>
+                    </div>
+                </h1>
+            </div>
+
+            <div class="bg-gray-100 flex flex-col items-center justify-center h-full pt-4 pb-4">
+                <div class="relative w-full max-w-6xl mx-auto">
+                    <div id="slider-wrapper">
+                        <div id="slider">
+                            <!-- Original slides -->
+                            <div class="slide flex flex-col items-center justify-center">
+                                <img src="http://janos.com.bd/component/CityBank.png" alt="Company Logo 1">
+                                <p>The City Bank</p>
+                            </div>
+                            <div class="slide flex flex-col items-center justify-center">
+                                <img src="http://janos.com.bd/component/DutchBangla.png" alt="Company Logo 2">
+                                <p>Dutch-Bangla Bank Ltd.</p>
+                            </div>
+                            <div class="slide flex flex-col items-center justify-center">
+                                <img src="http://janos.com.bd/component/Confidence.jpg" alt="Company Logo 3">
+                                <p>Confidence</p>
+                            </div>
+                            <div class="slide flex flex-col items-center justify-center">
+                                <img src="http://janos.com.bd/component/Agrani.jpg" alt="Company Logo 4">
+                                <p>Agrani</p>
+                            </div>
+                            <div class="slide flex flex-col items-center justify-center">
+                                <img src="http://janos.com.bd/component/AsiaPacific.jpg" alt="Company Logo 5">
+                                <p>Asia Pacific</p>
+                            </div>
+                            <div class="slide flex flex-col items-center justify-center">
+                                <img src="http://janos.com.bd/component/Continental.jpg" alt="Company Logo 6">
+                                <p>Continental</p>
+                            </div>
+                            <div class="slide flex flex-col items-center justify-center">
+                                <img src="http://janos.com.bd/component/Fareast.png" alt="Company Logo 7">
+                                <p>Fareast-Islami Life Insurance</p>
+                            </div>
+                            <div class="slide flex flex-col items-center justify-center">
+                                <img src="http://janos.com.bd/component/Federal.png" alt="Company Logo 8">
+                                <p>Federal Insurance Company Ltd</p>
+                            </div>
+                            <!-- Duplicate the first four slides for seamless looping -->
+                            <div class="slide flex flex-col items-center justify-center">
+                                <img src="http://janos.com.bd/component/Headerbg.jpg" alt="Company Logo 1">
+                                <p>HeaderbgCement Bangladesh Ltd</p>
+                            </div>
+                            <div class="slide flex flex-col items-center justify-center">
+                                <img src="http://janos.com.bd/component/Philips.png" alt="Company Logo 2">
+                                <p>Transtec Philips</p>
+                            </div>
+                            <div class="slide flex flex-col items-center justify-center">
+                                <img src="http://janos.com.bd/component/dulamia.png" alt="Company Logo 3">
+                                <p>Dulamia Cotton & Spnning Mills</p>
+                            </div>
+                            <div class="slide flex flex-col items-center justify-center">
+                                <img src="http://janos.com.bd/component/ICBIB.png" alt="Company Logo 4">
+                                <p>ICB Islamic Bank Limited</p>
+                            </div>
+                            <div class="slide flex flex-col items-center justify-center">
+                                <img src="http://janos.com.bd/component/Crowm.png" alt="Company Logo 4">
+                                <p>Crowm Cement PLC</p>
+                            </div>
+                            <div class="slide flex flex-col items-center justify-center">
+                                <img src="http://janos.com.bd/component/Meghna.png" alt="Company Logo 4">
+                                <p>Meghna</p>
+                            </div>
+                            <div class="slide flex flex-col items-center justify-center">
+                                <img src="http://janos.com.bd/component/MeghnaInsurance.png" alt="Company Logo 4">
+                                <p>Meghna Insurance Ltd</p>
+                            </div>
+                            <div class="slide flex flex-col items-center justify-center">
+                                <img src="http://janos.com.bd/component/Miracle.png" alt="Company Logo 4">
+                                <p>Miracle</p>
+                            </div>
+                            <div class="slide flex flex-col items-center justify-center">
+                                <img src="http://janos.com.bd/component/Janata.png" alt="Company Logo 4">
+                                <p>Janata Insurance Company Ltd</p>
+                            </div>
+                            <div class="slide flex flex-col items-center justify-center">
+                                <img src="http://janos.com.bd/component/Pragati.png" alt="Company Logo 4">
+                                <p>Pragati Life Insurance Ltd</p>
+                            </div>
+                            <div class="slide flex flex-col items-center justify-center">
+                                <img src="http://janos.com.bd/component/Prime.png" alt = "Company Logo 4">
+                                <p>Prime Insurance Company Ltd</p>
+                            </div>
+                            <div class="slide flex flex-col items-center justify-center">
+                                <img src="http://janos.com.bd/component/PharmaAid.png" alt="Company Logo 4">
+                                <p>Pharma Aids Limited</p>
+                            </div>
+                            <div class="slide flex flex-col items-center justify-center">
+                                <img src="http://janos.com.bd/component/Karnaphuli.png" alt="Company Logo 4">
+                                <p>Karnaphuli Insurance Company</p>
+                            </div>
+                            <div class="slide flex flex-col items-center justify-center">
+                                <img src="http://janos.com.bd/component/Rupali.png" alt="Company Logo 4">
+                                <p>Rupali Insurance Company</p>
+                            </div>
+                            <div class="slide flex flex-col items-center justify-center">
+                                <img src="http://janos.com.bd/component/younus.png" alt="Company Logo 4">
+                                <p>YounusGroup</p>
+                            </div>
+                            <div class="slide flex flex-col items-center justify-center">
+                                <img src="http://janos.com.bd/component/Eastland.png" alt="Company Logo 4">
+                                <p>Eastland Insurance Company</p>
+                            </div>
+                            <div class="slide flex flex-col items-center justify-center">
+                                <img src="http://janos.com.bd/component/UCB.png" alt="Company Logo 4">
+                                <p>United Commercial Bank PLC</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-container">
+                        <button class="nav-button prev-button" onclick="prevSlide()">Previous</button>
+                        <button class="nav-button next-button" onclick="nextSlide()">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-6">
+            <!-- Popular Links -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Popular Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="./index.html" class="hover:underline">Home</a></li>
+                    <li><a href="./aboutUs.html" class="hover:underline">About Us</a></li>
+                    <li><a href="./easyAM.html" class="text-black hover:text-gray-600">EasyAM</a></li>
+                    <li><a href="#" class="hover:underline">Gallery</a></li>
+                    <li><a href="./career.html" class="hover:underline">Career</a></li>
+                    <li><a href="#" class="hover:underline">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Get in Touch -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Get in Touch</h3>
+                <p>Location : Dhaka Office: House-251, Block-B, Eastern Housing, Pallabi 2nd Phase, Mirpur, Dhaka 1216,
+                    Bangladesh</p>
+                <p>Email : info@janos.com.bd</p>
+                <p>Phone : (123) 456-7890</p>
+            </div>
+
+            <!-- Follow Us -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:opacity-75"><img src="facebook-icon.png" alt="Facebook" class="h-6"></a>
+                    <a href="#" class="hover:opacity-75"><img src="twitter-icon.png" alt="Twitter" class="h-6"></a>
+                    <a href="#" class="hover:opacity-75"><img src="instagram-icon.png" alt="Instagram" class="h-6"></a>
+                    <a href="#" class="hover:opacity-75"><img src="linkedin-icon.png" alt="LinkedIn" class="h-6"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEO Section Animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f3f4f6;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        .content-left,
+        .content-right {
+            width: 30%;
+        }
+
+        .text-block {
+            margin-bottom: 40px;
+            opacity: 0;
+            transition: opacity 1s, transform 1s;
+            text-align: justify;
+        }
+
+        /* Set initial transform for animation */
+        .text-block.left {
+            transform: translateX(-100%);
+        }
+
+        .text-block.right {
+            transform: translateX(100%);
+        }
+
+        .ceo-section {
+            text-align: center;
+            width: 30%;
+            background-color: #3bc4c9e1;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .ceo-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .ceo-bio {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            text-align: justify;
+            color: white;
+        }
+
+        .ceo-button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .icon {
+            font-size: 2rem;
+            color: #f50f32;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        p {
+            font-size: 0.9rem;
+            color: #666;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <div class="content-left">
+            <div class="text-block left">
+                <img src="./house (1).png" alt="" style="height: 15%; width: 15%;">
+                <h3>Best in Industry</h3>
+                <p>We strive for development from every ascribed level of technologies to enhance users performing
+                    environment fastening interfaces to be best in Industry level.</p>
+            </div>
+            <div class="text-block left">
+                <img src="./smile-face.png" alt="" style="height: 15%; width: 15%;">
+                <h3>100% Happy Clients</h3>
+                <p>We make customers 100% happy remained connected listening all to provide required supports to happen
+                    create new development.</p>
+            </div>
+            <!-- #F60F27 -->
+            <div class="text-block left">
+                <img src="./bar-chart.png" alt="" style="height: 15%; width: 15%;">
+                <h3>Agile</h3>
+                <p>An agile based software development approach offers many advantages of an iterative and fast-paced
+                    process. However, customers often find themselves at crossroads when it comes to choosing a specific
+                    adoption path.</p>
+            </div>
+        </div>
+
+        <div class="ceo-section">
+            <img src="http://janos.com.bd/img/feature.jpg" alt="CEO" class="ceo-image">
+            <p class="ceo-bio">Highly skilled professionals who possess expertise in diverse Business and Technology
+                areas make up our team. To provide world class service we employ the best technicians, adhere to proven
+                methodology, provide superior client service and become a true business partner in every project.</p>
+            <p style="font-weight: bold; color: white;">Our Roadmap to development is a collection of eight steps each
+                of which has its own significance:</p>
+            <p style="color: white;">• Data Mining<br> • Forming a sketch<br> • Making a blueprint<br> • Designing<br> •
+                Constructing<br> • Testing<br> • Deployment<br> • Maintenance & Upgradation<br> • Rapid implementation.
+            </p>
+        </div>
+
+        <div class="content-right">
+            <div class="text-block right">
+                <img src="./man-walking.png" alt="" style="height: 15%; width: 15%;">
+                <h3>Complexity Works</h3>
+                <p>Expected solutions never come from simple things. So behind the simple interfaces, we bind mammoth
+                    structures as you desire resembling complexity works for you.</p>
+            </div>
+            <div class="text-block right">
+                <img src="./cube.png" alt="" style="height: 15%; width: 15%;">
+                <h3>Made Simple</h3>
+                <p>We provide all possible solutions at your required end from massive processing of giant IT
+                    infrastructures from our end to make your problems very simple.</p>
+            </div>
+            <div class="text-block right">
+                <img src="./server.png" alt="" style="height: 15%; width: 15%;">
+                <h3>24/7 Customer Support</h3>
+                <p>We provide support around the clock to solve problems through planning, installation, training,
+                    troubleshooting, maintenance, upgrading, and disposal of products.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const leftBlocks = document.querySelectorAll(".text-block.left");
+            const rightBlocks = document.querySelectorAll(".text-block.right");
+
+            // Apply animation for left text blocks
+            leftBlocks.forEach((block, index) => {
+                setTimeout(() => {
+                    block.style.opacity = 1;
+                    block.style.transform = "translateX(0)";
+                }, index * 300);
+            });
+
+            // Apply animation for right text blocks
+            rightBlocks.forEach((block, index) => {
+                setTimeout(() => {
+                    block.style.opacity = 1;
+                    block.style.transform = "translateX(0)";
+                }, index * 300);
+            });
+        });
+    </script>
+</body>
+
+</html>

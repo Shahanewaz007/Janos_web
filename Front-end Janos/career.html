@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="font-sans bg-gray-100 flex flex-col min-h-screen">
+
+    <!-- Header Section -->
+    <header class="fixed top-0 w-full bg-white shadow-md z-10">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <img src="./janos.png" alt="Logo" class="h-12"> <!-- Replace with your logo -->
+            </div>
+
+            <!-- Navigation Links (hidden on mobile) -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="./index.html" class="text-black hover:text-gray-600">Home</a>
+                <a href="./aboutUs.html" class="text-black hover:text-gray-600">About Us</a>
+                <a href="#" class="text-black hover:text-gray-600">EasyAM</a>
+                <a href="./career.html" class="text-black hover:text-gray-600">Career</a>
+                <a href="#" class="text-black hover:text-gray-600">Contact</a>
+            </nav>
+
+            <!-- Hamburger Icon for Mobile (Visible on small screens) -->
+            <div class="flex md:hidden">
+                <button id="menu-toggle" class="text-black focus:outline-none">
+                    <!-- Three dot or hamburger icon -->
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Links (hidden by default) -->
+        <div id="mobile-menu" class="md:hidden bg-white shadow-lg hidden">
+            <ul class="space-y-2 p-4">
+                <li><a href="./index.html" class="text-black hover:text-gray-600">Home</a></li>
+                <li><a href="#" class="text-black hover:text-gray-600">About Us</a></li>
+                <li><a href="#" class="text-black hover:text-gray-600">EasyAM</a></li>
+                <li><a href="./career.html" class="text-black hover:text-gray-600">Career</a></li>
+                <li><a href="#" class="text-black hover:text-gray-600">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+    <main class="flex-grow flex items-center justify-center pt-32 pb-16">
+        <!-- Form Section -->
+        <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-2xl shadow-lg"
+            style="box-shadow: 0px 4px 8px rgb(168, 5, 217);">
+            <h2 class="text-2xl font-bold text-center mb-6">Join Us</h2>
+
+            <!-- Form Start -->
+            <form class="space-y-4 ">
+                <!-- Position Field -->
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2" for="position">Position:</label>
+                    <select id="position" name="position"
+                        class="w-full p-3 border rounded focus:outline-none focus:bg-sky-500">
+                        <option value="">Please Select</option>
+                        <option value="Developer">Developer</option>
+                        <option value="Designer">Designer</option>
+                        <option value="Manager">Manager</option>
+                    </select>
+                </div>
+                <!-- Name Field -->
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2" for="name">Full Name:</label>
+                    <input type="text" id="name" name="name"
+                        class="w-full p-3 border rounded focus:outline-none focus:bg-sky-500"
+                        placeholder="Enter your full name">
+                </div>
+                <!-- Email Field -->
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2" for="email">Email:</label>
+                    <input type="email" id="email" name="email"
+                        class="w-full p-3 border rounded focus:outline-none focus:bg-sky-500"
+                        placeholder="Enter your email">
+                </div>
+                <!-- Phone Field -->
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2" for="phone">Phone:</label>
+                    <input type="text" id="phone" name="phone"
+                        class="w-full p-3 border rounded focus:outline-none focus:bg-sky-500"
+                        placeholder="Enter your phone number">
+                </div>
+                <!-- Address Field -->
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2" for="address">Address:</label>
+                    <textarea id="address" name="address"
+                        class="w-full p-3 border rounded focus:outline-none focus:bg-sky-500"
+                        placeholder="Enter your address"></textarea>
+                </div>
+                <!-- Last Education Level Field -->
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2" for="education">Last Education Level:</label>
+                    <input type="text" id="last_edu" name="last_edu"
+                        class="w-full p-3 border rounded focus:outline-none focus:bg-sky-500"
+                        placeholder="Enter your Last Education">
+                </div>
+                <!-- Major Field -->
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2" for="major">Major:</label>
+                    <input type="text" id="major" name="major"
+                        class="w-full p-3 border rounded focus:outline-none focus:bg-sky-500"
+                        placeholder="Enter your Major">
+                </div>
+                <!-- Photo Field -->
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2" for="photo">Photo:</label>
+                    <input type="file" id="photo" name="photo"
+                        class="w-full p-3 border rounded focus:outline-none focus:bg-sky-500">
+                </div>
+                <!-- Cover Letter Field -->
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2" for="cover_letter">Cover Letter:</label>
+                    <input type="file" id="cover_letter" name="cover_letter"
+                        class="w-full p-3 border rounded focus:outline-none focus:bg-sky-500">
+                </div>
+                <!-- CV Field -->
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2" for="cv">CV:</label>
+                    <input type="file" id="cv" name="cv"
+                        class="w-full p-3 border rounded focus:outline-none focus:bg-sky-500">
+                </div>
+                <!-- Submit Button -->
+                <div>
+                    <button type="submit"
+                        class="w-full bg-sky-500 text-white font-semibold p-3 rounded hover:bg-sky-600 focus:outline-none">Submit</button>
+                </div>
+            </form>
+            <!-- Form End -->
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-6">
+            <!-- Popular Links -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Popular Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="./index.html" class="hover:underline">Home</a></li>
+                    <li><a href="./aboutUs.html" class="hover:underline">About Us</a></li>
+                    <li><a href="#" class="hover:underline">EasyAM</a></li>
+                    <li><a href="./career.html" class="hover:underline">Career</a></li>
+                    <li><a href="#" class="hover:underline">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Get in Touch -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Get in Touch</h3>
+                <p>Location : Dhaka Office: House-251, Block-B, Eastern Housing, Pallabi 2nd Phase, Mirpur, Dhaka 1216,
+                    Bangladesh</p>
+                <p>Email : info@janos.com.bd</p>
+                <p>Phone : (123) 456-7890</p>
+            </div>
+
+            <!-- Follow Us -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:opacity-75"><img src="facebook-icon.png" alt="Facebook" class="h-6"></a>
+                    <a href="#" class="hover:opacity-75"><img src="twitter-icon.png" alt="Twitter" class="h-6"></a>
+                    <a href="#" class="hover:opacity-75"><img src="instagram-icon.png" alt="Instagram" class="h-6"></a>
+                    <a href="#" class="hover:opacity-75"><img src="linkedin-icon.png" alt="LinkedIn" class="h-6"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

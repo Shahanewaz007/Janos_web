@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Animation Example</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            height: 70vh;
+            /* Set a larger height to allow scrolling */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-box,
+        .text-box {
+            position: relative;
+            width: 200px; /* Reduced width */
+            opacity: 0;
+            transition: transform 1s ease, opacity 1s ease;
+        }
+
+        .image-box {
+            transform: translateX(-100%);
+            height: 400px;
+            width: 400px; /* Reduced height */
+        }
+
+        .image-box img {
+            width: 100%; /* Make image responsive within container */
+            height: auto;
+        }
+
+        .text-box {
+            transform: translateX(100%);
+            width: 300px;
+        }
+
+        /* Red line bar style */
+        .line-bar {
+            width: 6px;
+            height: 350px;
+            background-color: red;
+            opacity: 0;
+            transition: opacity 1s ease;
+            margin: 0 100px;
+        }
+
+        /* Animation trigger class */
+        .sticky {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="image-box" id="imageBox">
+            <img src="https://www.enosisbd.com/wp-content/uploads/2020/06/home-dev.png" alt="Placeholder Image">
+        </div>
+        <!-- Red line bar between image and text -->
+        <div class="line-bar" id="lineBar"></div>
+        <div class="text-box" id="textBox">
+            <h1>Custom Software Development</h1>
+            <p>Enosis helps you create diverse and complex software solutions for your business needs. Listening to
+                your ideas, we implement and create custom software solutions from scratch, designed especially for your
+                business. With Enosis, you get quality software and perfect service every time.</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="text-box" id="textBox">
+            <h1>Web Application Development</h1>
+            <p>Enosis looks beyond conventional solutions to develop disruptive web products...</p>
+        </div>
+        <div class="line-bar" id="lineBar"></div>
+        <div class="image-box" id="imageBox">
+            <img src="https://www.enosisbd.com/wp-content/uploads/2020/06/home-web.png" alt="Placeholder Image">
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-box" id="imageBox">
+            <img src="https://www.enosisbd.com/wp-content/uploads/2020/06/home-mobile.png" alt="Placeholder Image">
+        </div>
+        <div class="line-bar" id="lineBar"></div>
+        <div class="text-box" id="textBox">
+            <h1>Mobile Application Development</h1>
+            <p>Our expertise in custom mobile app development gives our clients the opportunity...</p>
+        </div>
+    </div>
+
+    <!-- Box 4 -->
+    <div class="container">
+        <div class="text-box" id="">
+            <h1>Quality Assurance & Testing</h1>
+            <p>Treading on Agile development methodologies and Rational Unified Process practices in testing...</p>
+        </div>
+        <div class="line-bar" id="lineBar"></div>
+        <div class="image-box" id="imageBox">
+            <img src="https://www.enosisbd.com/wp-content/uploads/2020/06/home-qa.png" alt="Placeholder Image">
+        </div>
+    </div>
+    <script>
+        // Function to add 'sticky' class when elements are in view
+        function animateOnScroll() {
+            const imageBoxes = document.querySelectorAll('.image-box');
+            const textBoxes = document.querySelectorAll('.text-box');
+            const lineBars = document.querySelectorAll('.line-bar');
+            const windowHeight = window.innerHeight;
+
+            // Loop through each set of elements
+            imageBoxes.forEach((imageBox, index) => {
+                const imageBoxPosition = imageBox.getBoundingClientRect().top;
+                const textBoxPosition = textBoxes[index].getBoundingClientRect().top;
+                const lineBar = lineBars[index];
+
+                if (imageBoxPosition < windowHeight - 100) {
+                    imageBox.classList.add('sticky');
+                    lineBar.classList.add('sticky');
+                }
+
+                if (textBoxPosition < windowHeight - 100) {
+                    textBoxes[index].classList.add('sticky');
+                }
+            });
+        }
+
+        // Event listener for scroll event
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
+</body>
+
+</html>

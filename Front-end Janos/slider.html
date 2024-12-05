@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Logo Slider</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        #slider-wrapper {
+            overflow: hidden;
+            width: 80%;
+            margin: 0 auto;
+            padding: 1rem;
+            box-sizing: border-box;
+            background-color: #f8f9fa;
+        }
+
+        #slider {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slide {
+            flex: 0 0 50%;
+            /* 25% width per slide to fit 4 in view */
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .slide img {
+            width: 80px;
+            height: auto;
+            max-height: 80px;
+            margin-bottom: 0.5rem;
+        }
+
+        .slide p {
+            font-size: 1rem;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            margin: 1rem auto 0;
+        }
+
+        .nav-button {
+            background-color: #4a5568;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
+
+    <div class="relative w-full max-w-6xl mx-auto">
+        <div id="slider-wrapper">
+            <div id="slider">
+                <!-- Original slides -->
+                <div class="slide flex flex-col items-center justify-center">
+                    <img src="http://janos.com.bd/component/CityBank.png" alt="Company Logo 1">
+                    <p>The City Bank</p>
+                </div>
+                <div class="slide flex flex-col items-center justify-center">
+                    <img src="http://janos.com.bd/component/DutchBangla.png" alt="Company Logo 2">
+                    <p>Dutch-Bangla Bank Ltd.</p>
+                </div>
+                <div class="slide flex flex-col items-center justify-center">
+                    <img src="http://janos.com.bd/component/Confidence.jpg" alt="Company Logo 3">
+                    <p>Confidence</p>
+                </div>
+                <div class="slide flex flex-col items-center justify-center">
+                    <img src="http://janos.com.bd/component/Agrani.jpg" alt="Company Logo 4">
+                    <p>Agrani</p>
+                </div>
+                <div class="slide flex flex-col items-center justify-center">
+                    <img src="http://janos.com.bd/component/AsiaPacific.jpg" alt="Company Logo 5">
+                    <p>Asia Pacific</p>
+                </div>
+                <div class="slide flex flex-col items-center justify-center">
+                    <img src="http://janos.com.bd/component/Continental.jpg" alt="Company Logo 6">
+                    <p>Continental</p>
+                </div>
+                <div class="slide flex flex-col items-center justify-center">
+                    <img src="http://janos.com.bd/component/Fareast.png" alt="Company Logo 7">
+                    <p>Fareast Islami Life Insurance Company Limited</p>
+                </div>
+                <div class="slide flex flex-col items-center justify-center">
+                    <img src="http://janos.com.bd/component/Federal.png" alt="Company Logo 8">
+                    <p>Federal Insurance Company Ltd</p>
+                </div>
+                <!-- Duplicate the first four slides for seamless looping -->
+                <div class="slide flex flex-col items-center justify-center">
+                    <img src="http://janos.com.bd/component/Headerbg.jpg" alt="Company Logo 1">
+                    <p>HeaderbgCement Bangladesh Limited</p>
+                </div>
+                <div class="slide flex flex-col items-center justify-center">
+                    <img src="http://janos.com.bd/component/Philips.png" alt="Company Logo 2">
+                    <p>Transtec Philips</p>
+                </div>
+                <div class="slide flex flex-col items-center justify-center">
+                    <img src="http://janos.com.bd/component/dulamia.png" alt="Company Logo 3">
+                    <p>Dulamia Cotton & Spnning Mills Ltd</p>
+                </div>
+                <div class="slide flex flex-col items-center justify-center">
+                    <img src="http://janos.com.bd/component/ICBIB.png" alt="Company Logo 4">
+                    <p>ICB Islamic Bank Limited</p>
+                </div>
+                <div class="slide flex flex-col items-center justify-center">
+                    <img src="http://janos.com.bd/component/Crowm.png" alt="Company Logo 4">
+                    <p>Crowm Cement PLC</p>
+                </div>
+                <div class="slide flex flex-col items-center justify-center">
+                    <img src="http://janos.com.bd/component/Meghna.png" alt="Company Logo 4">
+                    <p>Meghna</p>
+                </div>
+                <div class="slide flex flex-col items-center justify-center">
+                    <img src="http://janos.com.bd/component/MeghnaInsurance.png" alt="Company Logo 4">
+                    <p>Meghna Insurance Ltd</p>
+                </div>
+                <div class="slide flex flex-col items-center justify-center">
+                    <img src="http://janos.com.bd/component/Miracle.png" alt="Company Logo 4">
+                    <p>Miracle</p>
+                </div>
+                <div class="slide flex flex-col items-center justify-center">
+                    <img src="http://janos.com.bd/component/Janata.png" alt="Company Logo 4">
+                    <p>Janata Insurance Company Ltd</p>
+                </div>
+                <div class="slide flex flex-col items-center justify-center">
+                    <img src="http://janos.com.bd/component/Pragati.png" alt="Company Logo 4">
+                    <p>Pragati Life Insurance Ltd</p>
+                </div>
+                <div class="slide flex flex-col items-center justify-center">
+                    <img src="http://janos.com.bd/component/Prime.png" alt = "Company Logo 4">
+                    <p>Prime Insurance Company Limited</p>
+                </div>
+                <div class="slide flex flex-col items-center justify-center">
+                    <img src="http://janos.com.bd/component/PharmaAid.png" alt="Company Logo 4">
+                    <p>Pharma Aids Limited</p>
+                </div>
+                <div class="slide flex flex-col items-center justify-center">
+                    <img src="http://janos.com.bd/component/Karnaphuli.png" alt="Company Logo 4">
+                    <p>Karnaphuli Insurance Company Limited</p>
+                </div>
+                <div class="slide flex flex-col items-center justify-center">
+                    <img src="http://janos.com.bd/component/Rupali.png" alt="Company Logo 4">
+                    <p>Rupali Insurance Company Limited</p>
+                </div>
+                <div class="slide flex flex-col items-center justify-center">
+                    <img src="http://janos.com.bd/component/younus.png" alt="Company Logo 4">
+                    <p>YounusGroup</p>
+                </div>
+                <div class="slide flex flex-col items-center justify-center">
+                    <img src="http://janos.com.bd/component/Eastland.png" alt="Company Logo 4">
+                    <p>Eastland Insurance Company Limited</p>
+                </div>
+                <div class="slide flex flex-col items-center justify-center">
+                    <img src="http://janos.com.bd/component/UCB.png" alt="Company Logo 4">
+                    <p>United Commercial Bank PLC Limited(UCB)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-container">
+            <button class="nav-button prev-button" onclick="prevSlide()">Previous</button>
+            <button class="nav-button next-button" onclick="nextSlide()">Next</button>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const slidesToShow = 2;
+        const originalSlideCount = 20;
+        const slider = document.getElementById('slider');
+
+        // Define interval and reset timeout for auto-slide
+        let autoSlideInterval;
+        const autoSlideDelay = 1000;
+        let userInteractionTimeout;
+
+        function updateSlidePosition() {
+            const offset = -(currentIndex * 100) / slidesToShow;
+            slider.style.transform = `translateX(${offset}%)`;
+        }
+
+        function nextSlide() {
+            resetAutoSlide();
+            currentIndex++;
+            updateSlidePosition();
+
+            if (currentIndex === originalSlideCount) {
+                setTimeout(() => {
+                    slider.style.transition = 'none';
+                    currentIndex = 0;
+                    updateSlidePosition();
+                    setTimeout(() => slider.style.transition = 'transform 0.5s ease', 50);
+                }, 500);
+            }
+        }
+
+        function prevSlide() {
+            resetAutoSlide();
+            if (currentIndex === 0) {
+                slider.style.transition = 'none';
+                currentIndex = originalSlideCount;
+                updateSlidePosition();
+                setTimeout(() => {
+                    slider.style.transition = 'transform 0.5s ease';
+                    currentIndex--;
+                    updateSlidePosition();
+                }, 50);
+            } else {
+                currentIndex--;
+                updateSlidePosition();
+            }
+        }
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(nextSlide, autoSlideDelay);
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            clearTimeout(userInteractionTimeout);
+            userInteractionTimeout = setTimeout(startAutoSlide, 3000); // 3 seconds of inactivity
+        }
+
+        startAutoSlide();
+    </script>
+</body>
+
+</html>
